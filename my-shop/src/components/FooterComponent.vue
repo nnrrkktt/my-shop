@@ -64,7 +64,6 @@ export default {
 .footer-section h3 {
   color: #f39c12;
   margin-bottom: 15px;
-  font-size: 1.2rem;
 }
 
 .contact-info li, .footer-links li {
@@ -98,7 +97,6 @@ export default {
 
 .footer-bottom p {
   margin: 0;
-  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
