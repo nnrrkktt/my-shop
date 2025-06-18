@@ -1,45 +1,34 @@
 <template>
-    <div>
-        <h2>Відгуки</h2>
-    </div>
-    <table>
-<thead>
-
-<tr>
-
-<th>Im'n</th>
-
-<th>Рейтинг </th>
-
-<th>Коментар</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr v-for= "(review, index) in reviews" :key="index">
-
-<td>{{ review.Name }}</td>
-
-<td>{{ review.Rating }}</td>
-
-<td>{{ review.Comment }}</td>
-
-</tr>
-
-</tbody>
-
-</table>
+  <div class="reviews-container">
+    <h2 class="reviews-title">Відгуки</h2>
+    <table class="reviews-table">
+      <thead>
+        <tr>
+          <th>Ім'я</th>
+          <th>Дата</th>
+          <th>Рейтинг</th>
+          <th>Коментар</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(review, index) in reviews" :key="index">
+          <td>{{ review.name }}</td>
+          <td>{{ review.date }}</td>
+          <td>{{ review.rating }}</td>
+          <td>{{ review.comment }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
+
 <script>
 import Papa from 'papaparse';
 
 export default {
   data() {
     return {
-      reviews: [] 
+      reviews: []
     };
   },
   created() {
@@ -61,4 +50,36 @@ export default {
         },
          });
 },
+
 </script>
+
+<style scoped>
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reviews-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.reviews-table th,
+.reviews-table td {
+  padding: 4px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.reviews-table th {
+  background-color: #e9ecef;
+}
+</style>
