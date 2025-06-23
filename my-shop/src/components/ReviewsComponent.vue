@@ -5,17 +5,15 @@
       <thead>
         <tr>
           <th>Ім'я</th>
-          <th>Дата</th>
           <th>Рейтинг</th>
           <th>Коментар</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(review, index) in reviews" :key="index">
-          <td>{{ review.name }}</td>
-          <td>{{ review.date }}</td>
-          <td>{{ review.rating }}</td>
-          <td>{{ review.comment }}</td>
+          <td>{{ review.Name }}</td>
+          <td>{{ review.Rating }}</td>
+          <td>{{ review.Comment }}</td>
         </tr>
       </tbody>
     </table>
@@ -50,6 +48,7 @@ export default {
         },
          });
 },
+}
 </script>
 
 <style scoped>
