@@ -1,14 +1,14 @@
 <template>
-    <div>
-        <ReviewsComponent />
-    </div>
+  <div>
+    <ReviewsComponent />
+  </div>
 </template>
-<script>
-import ReviewsComponent from '../componenets/ReviewsComponent.vue';
 
+<script>
+import ReviewsComponent from '@/components/ReviewsComponent.vue'; // Перевірте, що файл існує
 export default {
-    components: {
-        ReviewsComponent,
-    },
+  components: {
+    ReviewsComponent,
+  },
 };
 </script>
