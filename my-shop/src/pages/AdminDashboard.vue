@@ -1,4 +1,5 @@
 <template>
+
   <div class="app-container">
     <nav class="main-nav">
       <div class="nav-container">
@@ -28,13 +29,6 @@
     active-class="active-link"
   >
     <i class="fas fa-comment-alt"></i> Відгуки
-  </router-link>
-  <router-link
-    to="/profile"
-    class="nav-link"
-    active-class="active-link"
-  >
-    <i class="fas fa-user-circle"></i> Особистий кабінет
   </router-link>
 </div>
       </div>

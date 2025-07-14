@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ReviewsComponent from '@/components/ReviewsComponent.vue'; // Перевірте, що файл існує
+import ReviewsComponent from '@/components/ReviewsComponent.vue'; 
 export default {
   components: {
     ReviewsComponent,
