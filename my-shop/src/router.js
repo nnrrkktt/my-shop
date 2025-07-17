@@ -4,8 +4,8 @@ import BedLinenPage from './pages/categories/BedLinenPage.vue';
 import BlanketsPage from './pages/categories/BlanketsPage.vue';
 import ComfortersPage from './pages/categories/ComfortersPage.vue';
 import PillowsPage from './pages/categories/PillowsPage.vue';
-import ContactsPage from './pages/categories/ContactsPage.vue'; 
 import MessagePage from './pages/categories/MessagePage.vue';
+import ContactsPage from './pages/categories/ContactsPage.vue';
 
 const routes = [
   {
@@ -13,7 +13,7 @@ const routes = [
     name: 'Home',
     component: ManageProducts
   },
-   {
+  {
     path: '/category/manage',
     name: 'Головна',
     component: ManageProducts
@@ -44,10 +44,10 @@ const routes = [
     component: ContactsPage
   },
   {
-path:'/message',
-name: 'Відгуки',
-component: MessagePage
-  },
+    path: '/message',
+    name: 'Відгуки',
+    component: MessagePage
+  }
 ];
 
 const router = createRouter({

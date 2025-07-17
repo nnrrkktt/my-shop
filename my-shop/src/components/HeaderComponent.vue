@@ -39,9 +39,11 @@
       </div>
     </nav>
   </div>
+
 </template>
 
 <script>
+
 export default {
   name: 'AppHeader',
   data() {

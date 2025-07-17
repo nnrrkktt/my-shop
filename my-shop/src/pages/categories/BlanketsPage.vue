@@ -2,55 +2,8 @@
   <div class="category-page">
     <h1>{{ categoryName }}</h1>
   </div>
-
   <div>
     <ProductList :products="filteredProducts" />
-  </div>
-
-  <div class="app-container">
-    <header class="top-header">
-      <div class="header-container">
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>+380 XXX XXX-XX-XX</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>info@postelna.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>м. Київ</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <nav class="main-nav">
-      <div class="nav-container">
-        <div class="nav-brand">
-          <h1 class="site-title">POSTELNA</h1>
-        </div>
-        <div class="categories-container">
-          <div class="categories-bar">
-            <router-link
-              v-for="category in categories"
-              :key="category.id"
-              :to="category.route"
-              class="category-btn"
-              :class="{ active: $route.path.includes(category.route) }"
-            >
-              {{ category.name }}
-            </router-link>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <main class="content">
-      <router-view :search-query="searchQuery" />
-    </main>
   </div>
 </template>
 
@@ -65,12 +18,7 @@ export default {
   data() {
     return {
       searchQuery: "",
-      categories: [
-        { id: 1, name: 'Постільна білизна', route: '/bed-linen' },
-        { id: 2, name: 'Пледи', route: '/blankets' },
-        { id: 3, name: 'Ковдри', route: '/comforters' },
-        { id: 4, name: 'Подушки', route: '/pillows' }
-      ],
+  
       products: [
         {
           name: "плед в кольорі'молочний'",
